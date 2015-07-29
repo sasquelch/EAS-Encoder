@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SAME_Test_App
+namespace EASEncoder_Test_App
 {
     internal static class Program
     {

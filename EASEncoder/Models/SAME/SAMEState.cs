@@ -10,5 +10,6 @@
 
         public int Id { private set; get; }
         public string Name { private set; get; }
+        public string Value => Name;
     }
 }

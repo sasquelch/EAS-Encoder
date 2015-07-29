@@ -6,6 +6,8 @@ using System.Speech.AudioFormat;
 using System.Speech.Synthesis;
 using System.Text;
 using EASEncoder.Models;
+using NAudio.Lame;
+using NAudio.Wave;
 
 namespace EASEncoder
 {
@@ -118,6 +120,7 @@ namespace EASEncoder
             _announcementSamples = _announcementStream.Length;
 
             GenerateWavFile();
+            GenerateMp3File();
         }
 
         public static MemoryStream GetMemoryStreamFromNewMessage(EASMessage message, bool ebsTone = true,
@@ -257,6 +260,14 @@ namespace EASEncoder
                 GenerateMemoryStream().CopyTo(wr.BaseStream);
             }
             f.Close();
+        }
+
+        private static void GenerateMp3File(string filename = "output")
+        {
+
+            using (var reader = new WaveFileReader(GenerateMemoryStream()))
+            using (var writer = new LameMP3FileWriter(filename + ".mp3", reader.WaveFormat, LAMEPreset.ABR_32))
+                reader.CopyTo(writer);
         }
 
         private static MemoryStream GenerateMemoryStream()
@@ -485,7 +496,7 @@ namespace EASEncoder
                 new SpeechAudioFormatInfo(EncodingFormat.Pcm,
                     44100, 16, 2, 176400, 2, null));
             synthesizer.Volume = 100;
-            synthesizer.Rate = 0;
+            synthesizer.Rate = 1;
             synthesizer.Speak(announcement);
             synthesizer.SetOutputToNull();
 

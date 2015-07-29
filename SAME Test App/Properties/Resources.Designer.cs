@@ -59,5 +59,15 @@ namespace SAME_Test_App.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to create EAS message:  You must enter a valid &apos;Sender&apos; id.  Ensure the id is exactly 8 characters length..
+        /// </summary>
+        internal static string Form1_ValidateInput_Unable_to_create_EAS_message___You_must_enter_a_valid__Sender__id___Ensure_the_id_is_exactly_8_characters_length_ {
+            get {
+                return ResourceManager.GetString("Form1_ValidateInput_Unable_to_create_EAS_message___You_must_enter_a_valid__Sender" +
+                        "__id___Ensure_the_id_is_exactly_8_characters_length_", resourceCulture);
+            }
+        }
     }
 }

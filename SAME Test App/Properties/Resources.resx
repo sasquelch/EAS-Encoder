@@ -114,4 +114,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Form1_ValidateInput_Unable_to_create_EAS_message___You_must_enter_a_valid__Sender__id___Ensure_the_id_is_exactly_8_characters_length_" xml:space="preserve">
+    <value>Unable to create EAS message:  You must enter a valid 'Sender' id.  Ensure the id is exactly 8 characters length.</value>
+  </data>
 </root>

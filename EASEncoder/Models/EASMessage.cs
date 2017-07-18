@@ -3509,8 +3509,7 @@ namespace EASEncoder.Models
 
     public class EASMessage
     {
-        private static readonly string Preamble = "\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab" +
-                                                  "ZCZC";
+        private static readonly string Preamble = "\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab";
 
         private readonly string _code;
         private readonly string _length;
@@ -3563,7 +3562,8 @@ namespace EASEncoder.Models
                     $"{ZeroPad(thisRegion.Subdivision.Id.ToString(), 1)}{ZeroPad(thisRegion.State.Id.ToString(), 2)}{ZeroPad(thisRegion.County.Id.ToString(), 3)}-");
             headerRegions = headerRegions.Remove(headerRegions.Length - 1);
 
-            return $"{Preamble}-" +
+            return $"{Preamble}" +
+                   $"{"ZCZC"}-" +
                    $"{_originator}-" +
                    $"{_code}-" +
                    $"{headerRegions}+" +
@@ -3571,7 +3571,7 @@ namespace EASEncoder.Models
                    $"{ZeroPad(_start.DayOfYear.ToString(), 3)}" +
                    $"{ZeroPad(_start.Hour.ToString(), 2)}" +
                    $"{ZeroPad(_start.Minute.ToString(), 2)}-" +
-                   $"{_sender}";
+                   $"{_sender}-";
         }
     }
 }

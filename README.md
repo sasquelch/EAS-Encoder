@@ -2,10 +2,10 @@ Encode EAS (Emergency Alert System - United States) audio messages with valid SA
 
 To build and run this project in Visual Studio, make ABSOLUTELY CERTAIN that you've set the "EASEncoder Test App" project as the startup project or you'll get an error when you try to compile and run.
 
-To set the startup project:
+**To set the startup project:**
 
-In Solution Explorer, select the solution (the top node).
-Highlight the project "EASEncoder Test App", right-click on it.
-From the pop-up menu, select "Set As Startup Project."
+1. In Solution Explorer, select the solution (the top node).
+2. Highlight the project "EASEncoder Test App", right-click on it.
+3. From the pop-up menu, select "Set As Startup Project."
     
 You're now ready to build and run - Enjoy!

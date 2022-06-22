@@ -4,8 +4,8 @@ To build and run this project in Visual Studio, make ABSOLUTELY CERTAIN that you
 
 To set the startup project:
 
-    In Solution Explorer, select the solution (the top node).
-    Highlight the project "EASEncoder Test App", right-click on it.
-    From the pop-up menu, select "Set As Startup Project."
+In Solution Explorer, select the solution (the top node).
+Highlight the project "EASEncoder Test App", right-click on it.
+From the pop-up menu, select "Set As Startup Project."
     
-    You're now ready to build and run - Enjoy!
+You're now ready to build and run - Enjoy!

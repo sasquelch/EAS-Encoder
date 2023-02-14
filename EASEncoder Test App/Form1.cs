@@ -35,10 +35,10 @@ namespace EASEncoder_Test_App
         {
             lblOutputDirectory.Text = Path.GetDirectoryName(
             Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0,6) + "\\Output";
+
             var bindingList = new BindingList<SAMERegion>(Regions);
             var source = new BindingSource(bindingList, null);
             datagridRegions.DataSource = source;
-            
 
             dateStart.ShowUpDown = true;
             dateStart.CustomFormat = "MM/dd/yyyy hh:mm tt";
@@ -267,8 +267,10 @@ namespace EASEncoder_Test_App
 
         private void btnClearRegions_Click(object sender, EventArgs e)
         {
-            datagridRegions.DataSource = null;
             Regions.Clear();
+            var bindingList = new BindingList<SAMERegion>(Regions);
+            var source = new BindingSource(bindingList, null);
+            datagridRegions.DataSource = source;
 
             _locationCount = 0;
             locCountLabel.Text = "Event Locations: " + _locationCount;

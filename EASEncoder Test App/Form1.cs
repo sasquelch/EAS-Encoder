@@ -239,7 +239,7 @@ namespace EASEncoder_Test_App
             {
                 player.Dispose();
                 player = null;
-                btnGeneratePlay.Text = "Generate && Play";
+                btnGeneratePlay.Text = "Preview EAS";
             };
 
             player.Init(volumeStream);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Speech.AudioFormat;
@@ -33,16 +34,19 @@ namespace EASEncoder
         private static bool _useEbsTone = true;
         private static bool _useNwsTone;
         private static string _announcement = string.Empty;
+        private static string _fileName = string.Empty;
+        private static string _outputPath = "Output\\";
 
         private static Dictionary<decimal, List<int>> headerByteCache = new Dictionary<decimal, List<int>>();
 
         public static void CreateNewMessage(EASMessage message, bool ebsTone = true, bool nwsTone = false,
-            string announcement = "")
+            string announcement = "", string fileName = "", bool openFile = false)
         {
             //headerByteCache = new Dictionary<decimal, List<int>>();
             _useEbsTone = ebsTone;
             _useNwsTone = nwsTone;
             _announcement = announcement;
+            _fileName = fileName;
 
             _headerSamples = new int[0];
             var byteArray = Encoding.Default.GetBytes(message.ToSameHeaderString());
@@ -119,8 +123,20 @@ namespace EASEncoder
                 GenerateVoiceAnnouncement(announcement);
             _announcementSamples = _announcementStream.Length;
 
+            //Create Output Folder if it doesn't exist
+            if (!Directory.Exists(_outputPath))
+            {
+                Directory.CreateDirectory(_outputPath);
+            }
+
             GenerateWavFile();
             GenerateMp3File();
+
+            if (openFile)
+            {
+                Process.Start("explorer.exe",
+                    "/select, \"" + _outputPath + _fileName + ".wav" + "\"");
+            }
         }
 
         public static MemoryStream GetMemoryStreamFromNewMessage(EASMessage message, bool ebsTone = true,
@@ -252,9 +268,9 @@ namespace EASEncoder
             return output;
         }
 
-        private static void GenerateWavFile(string filename = "output")
+        private static void GenerateWavFile()
         {
-            var f = new FileStream(filename + ".wav", FileMode.Create);
+            var f = new FileStream(_outputPath + _fileName + ".wav", FileMode.Create);
             using (var wr = new BinaryWriter(f))
             {
                 GenerateMemoryStream().CopyTo(wr.BaseStream);
@@ -262,11 +278,11 @@ namespace EASEncoder
             f.Close();
         }
 
-        private static void GenerateMp3File(string filename = "output")
+        private static void GenerateMp3File()
         {
 
             using (var reader = new WaveFileReader(GenerateMemoryStream()))
-            using (var writer = new LameMP3FileWriter(filename + ".mp3", reader.WaveFormat, LAMEPreset.ABR_32))
+            using (var writer = new LameMP3FileWriter(_outputPath + _fileName + ".mp3", reader.WaveFormat, LAMEPreset.ABR_32))
                 reader.CopyTo(writer);
         }
 

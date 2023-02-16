@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -23,6 +24,7 @@ namespace EASEncoder_Test_App
         private string _senderId;
         private DateTime _start;
         private WaveOutEvent player;
+        private int _locationCount;
 
         public Form1()
         {
@@ -32,11 +34,11 @@ namespace EASEncoder_Test_App
         private void Form1_Load(object sender, EventArgs e)
         {
             lblOutputDirectory.Text = Path.GetDirectoryName(
-            Assembly.GetExecutingAssembly().GetName().CodeBase);
+            Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0,6) + "\\Output";
+
             var bindingList = new BindingList<SAMERegion>(Regions);
             var source = new BindingSource(bindingList, null);
             datagridRegions.DataSource = source;
-            
 
             dateStart.ShowUpDown = true;
             dateStart.CustomFormat = "MM/dd/yyyy hh:mm tt";
@@ -92,6 +94,7 @@ namespace EASEncoder_Test_App
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+
             if (!ValidateInput())
             {
                 return;
@@ -103,15 +106,10 @@ namespace EASEncoder_Test_App
             var newMessage = new EASMessage(_selectedOriginator.Id, _selectedAlertCode.Id,
                 Regions, _length, _start, _senderId);
 
-            if (String.IsNullOrEmpty(txtOutputFile.Text))
-            {
-                MessageBox.Show("You must enter a valid output file name for the EAS audio message.", "Unable to create EAS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return;
-            }
+            
 
             EASEncoder.EASEncoder.CreateNewMessage(newMessage, chkEbsTones.Checked, chkNwsTone.Checked,
-                formatAnnouncement(txtAnnouncement.Text));
+                formatAnnouncement(txtAnnouncement.Text), txtOutputFile.Text, chkOpenFile.Checked);
         }
 
         internal string ZeroPad(string String, int Length)
@@ -198,6 +196,12 @@ namespace EASEncoder_Test_App
                 return false;
             }
 
+            if (String.IsNullOrEmpty(txtOutputFile.Text) || txtOutputFile.Text.IndexOfAny(Path.GetInvalidFileNameChars()) != -1 || txtOutputFile.Text.Contains("\\") || txtOutputFile.Text.Contains("/"))
+            {
+                MessageBox.Show("You must enter a valid output file name for the EAS audio message.", "Unable to create EAS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             return true;
         }
 
@@ -235,7 +239,7 @@ namespace EASEncoder_Test_App
             {
                 player.Dispose();
                 player = null;
-                btnGeneratePlay.Text = "Generate && Play";
+                btnGeneratePlay.Text = "Preview EAS";
             };
 
             player.Init(volumeStream);
@@ -254,7 +258,23 @@ namespace EASEncoder_Test_App
 
                 comboCounty.SelectedIndex = -1;
                 _selectedCounty = null;
+
+                _locationCount += 1;
+                locCountLabel.Text = "Event Locations: " + _locationCount;
+                locCountLabel.ForeColor = Color.Black;
             }
+        }
+
+        private void btnClearRegions_Click(object sender, EventArgs e)
+        {
+            Regions.Clear();
+            var bindingList = new BindingList<SAMERegion>(Regions);
+            var source = new BindingSource(bindingList, null);
+            datagridRegions.DataSource = source;
+
+            _locationCount = 0;
+            locCountLabel.Text = "Event Locations: " + _locationCount;
+            locCountLabel.ForeColor = Color.Red;
         }
 
         private void txtAnnouncement_TextChanged(object sender, EventArgs e)

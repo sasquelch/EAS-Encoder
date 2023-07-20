@@ -1,7 +1,7 @@
-﻿using System;
+using EASEncoder.Models.SAME;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using EASEncoder.Models.SAME;
 
 namespace EASEncoder.Models
 {
@@ -13,6 +13,7 @@ namespace EASEncoder.Models
             new SAMECounty(1, "Kent", new SAMEState(10, "DE")),
             new SAMECounty(3, "New Castle", new SAMEState(10, "DE")),
             new SAMECounty(5, "Sussex", new SAMEState(10, "DE")),
+            new SAMECounty(0, " Entire State", new SAMEState(10, "DE")),
 
             //DC - 11
             new SAMECounty(1, "District of Columbia", new SAMEState(11, "DC")),
@@ -85,6 +86,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Orange", new SAMEState(12, "FL")),
             new SAMECounty(97, "Osceola", new SAMEState(12, "FL")),
             new SAMECounty(99, "Palm Beach", new SAMEState(12, "FL")),
+            new SAMECounty(0, " Entire State", new SAMEState(12, "FL")),
 
             //GA - 13
             new SAMECounty(101, "Echols", new SAMEState(13, "GA")),
@@ -246,6 +248,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Dougherty", new SAMEState(13, "GA")),
             new SAMECounty(97, "Douglas", new SAMEState(13, "GA")),
             new SAMECounty(99, "Early", new SAMEState(13, "GA")),
+            new SAMECounty(0, " Entire State", new SAMEState(13, "GA")),
 
             //HI - 15
             new SAMECounty(1, "Hawaii", new SAMEState(15, "HI")),
@@ -253,6 +256,7 @@ namespace EASEncoder.Models
             new SAMECounty(5, "Kalawao", new SAMEState(15, "HI")),
             new SAMECounty(7, "Kauai", new SAMEState(15, "HI")),
             new SAMECounty(9, "Maui", new SAMEState(15, "HI")),
+            new SAMECounty(0, " Entire State", new SAMEState(15, "HI")),
 
             //ID - 16
             new SAMECounty(1, "Ada", new SAMEState(16, "ID")),
@@ -299,6 +303,7 @@ namespace EASEncoder.Models
             new SAMECounty(83, "Twin Falls", new SAMEState(16, "ID")),
             new SAMECounty(85, "Valley", new SAMEState(16, "ID")),
             new SAMECounty(87, "Washington", new SAMEState(16, "ID")),
+            new SAMECounty(0, " Entire State", new SAMEState(16, "ID")),
 
             //IL - 17
             new SAMECounty(101, "Lawrence", new SAMEState(17, "IL")),
@@ -403,7 +408,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Knox", new SAMEState(17, "IL")),
             new SAMECounty(97, "Lake", new SAMEState(17, "IL")),
             new SAMECounty(99, "LaSalle", new SAMEState(17, "IL")),
-
+            new SAMECounty(0, " Entire State", new SAMEState(17, "IL")),
 
             //IN - 18
             new SAMECounty(101, "Martin", new SAMEState(18, "IN")),
@@ -498,6 +503,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Madison", new SAMEState(18, "IN")),
             new SAMECounty(97, "Marion", new SAMEState(18, "IN")),
             new SAMECounty(99, "Marshall", new SAMEState(18, "IN")),
+            new SAMECounty(0, " Entire State", new SAMEState(18, "IN")),
 
             //IA - 19
             new SAMECounty(101, "Jefferson", new SAMEState(19, "IA")),
@@ -599,6 +605,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Iowa", new SAMEState(19, "IA")),
             new SAMECounty(97, "Jackson", new SAMEState(19, "IA")),
             new SAMECounty(99, "Jasper", new SAMEState(19, "IA")),
+            new SAMECounty(0, " Entire State", new SAMEState(19, "IA")),
 
             //KS - 20
             new SAMECounty(101, "Lane", new SAMEState(20, "KS")),
@@ -706,6 +713,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Kingman", new SAMEState(20, "KS")),
             new SAMECounty(97, "Kiowa", new SAMEState(20, "KS")),
             new SAMECounty(99, "Labette", new SAMEState(20, "KS")),
+            new SAMECounty(0, " Entire State", new SAMEState(20, "KS")),
 
             //KY - 21
             new SAMECounty(101, "Henderson", new SAMEState(21, "KY")),
@@ -828,6 +836,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Harlan", new SAMEState(21, "KY")),
             new SAMECounty(97, "Harrison", new SAMEState(21, "KY")),
             new SAMECounty(99, "Hart", new SAMEState(21, "KY")),
+            new SAMECounty(0, " Entire State", new SAMEState(21, "KY")),
 
 
             //LA - 22
@@ -895,6 +904,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "St. John the Baptist Parish", new SAMEState(22, "LA")),
             new SAMECounty(97, "St. Landry Parish", new SAMEState(22, "LA")),
             new SAMECounty(99, "St. Martin Parish", new SAMEState(22, "LA")),
+            new SAMECounty(0, " Entire State", new SAMEState(22, "LA")),
 
             //ME - 23
             new SAMECounty(1, "Androscoggin", new SAMEState(23, "ME")),
@@ -913,6 +923,7 @@ namespace EASEncoder.Models
             new SAMECounty(27, "Waldo", new SAMEState(23, "ME")),
             new SAMECounty(29, "Washington", new SAMEState(23, "ME")),
             new SAMECounty(31, "York", new SAMEState(23, "ME")),
+            new SAMECounty(33, " Entire State", new SAMEState(23, "ME")),
 
             //MD - 24
             new SAMECounty(510, "Baltimore city", new SAMEState(24, "MD")),
@@ -939,6 +950,7 @@ namespace EASEncoder.Models
             new SAMECounty(43, "Washington", new SAMEState(24, "MD")),
             new SAMECounty(45, "Wicomico", new SAMEState(24, "MD")),
             new SAMECounty(47, "Worcester", new SAMEState(24, "MD")),
+            new SAMECounty(0, " Entire State", new SAMEState(24, "MD")),
 
             //MA - 25
             new SAMECounty(1, "Barnstable", new SAMEState(25, "MA")),
@@ -955,6 +967,7 @@ namespace EASEncoder.Models
             new SAMECounty(23, "Plymouth", new SAMEState(25, "MA")),
             new SAMECounty(25, "Suffolk", new SAMEState(25, "MA")),
             new SAMECounty(27, "Worcester", new SAMEState(25, "MA")),
+            new SAMECounty(0, " Entire State", new SAMEState(25, "MA")),
 
             //MI - 26
             new SAMECounty(101, "Manistee", new SAMEState(26, "MI")),
@@ -1040,6 +1053,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Luce", new SAMEState(26, "MI")),
             new SAMECounty(97, "Mackinac", new SAMEState(26, "MI")),
             new SAMECounty(99, "Macomb", new SAMEState(26, "MI")),
+            new SAMECounty(0, " Entire State", new SAMEState(26, "MI")),
 
 
             //MN - 27
@@ -1130,6 +1144,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Mille Lacs", new SAMEState(27, "MN")),
             new SAMECounty(97, "Morrison", new SAMEState(27, "MN")),
             new SAMECounty(99, "Mower", new SAMEState(27, "MN")),
+            new SAMECounty(0, " Entire State", new SAMEState(27, "MN")),
 
             //MS - 28
             new SAMECounty(101, "Newton", new SAMEState(28, "MS")),
@@ -1214,6 +1229,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Monroe", new SAMEState(28, "MS")),
             new SAMECounty(97, "Montgomery", new SAMEState(28, "MS")),
             new SAMECounty(99, "Neshoba", new SAMEState(28, "MS")),
+            new SAMECounty(0, " Entire State", new SAMEState(28, "MS")),
 
             //MO - 29
             new SAMECounty(101, "Johnson", new SAMEState(29, "MO")),
@@ -1331,6 +1347,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Jackson", new SAMEState(29, "MO")),
             new SAMECounty(97, "Jasper", new SAMEState(29, "MO")),
             new SAMECounty(99, "Jefferson", new SAMEState(29, "MO")),
+            new SAMECounty(0, " Entire State", new SAMEState(29, "MO")),
 
             //MT - 30
             new SAMECounty(101, "Toole", new SAMEState(30, "MT")),
@@ -1389,6 +1406,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Stillwater", new SAMEState(30, "MT")),
             new SAMECounty(97, "Sweet Grass", new SAMEState(30, "MT")),
             new SAMECounty(99, "Teton", new SAMEState(30, "MT")),
+            new SAMECounty(0, " Entire State", new SAMEState(30, "MT")),
 
             //NE - 31
             new SAMECounty(101, "Keith", new SAMEState(31, "NE")),
@@ -1484,6 +1502,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Jefferson", new SAMEState(31, "NE")),
             new SAMECounty(97, "Johnson", new SAMEState(31, "NE")),
             new SAMECounty(99, "Kearney", new SAMEState(31, "NE")),
+            new SAMECounty(0, " Entire State", new SAMEState(31, "NE")),
 
             //NV - 32
             new SAMECounty(510, "Carson City", new SAMEState(32, "NV")),
@@ -1503,6 +1522,7 @@ namespace EASEncoder.Models
             new SAMECounty(29, "Storey", new SAMEState(32, "NV")),
             new SAMECounty(31, "Washoe", new SAMEState(32, "NV")),
             new SAMECounty(33, "White Pine", new SAMEState(32, "NV")),
+            new SAMECounty(0, " Entire State", new SAMEState(32, "NV")),
 
             //NH - 33
             new SAMECounty(1, "Belknap", new SAMEState(33, "NH")),
@@ -1515,6 +1535,7 @@ namespace EASEncoder.Models
             new SAMECounty(15, "Rockingham", new SAMEState(33, "NH")),
             new SAMECounty(17, "Strafford", new SAMEState(33, "NH")),
             new SAMECounty(19, "Sullivan", new SAMEState(33, "NH")),
+            new SAMECounty(0, " Entire State", new SAMEState(33, "NH")),
 
             //NJ - 34
             new SAMECounty(1, "Atlantic", new SAMEState(34, "NJ")),
@@ -1538,6 +1559,7 @@ namespace EASEncoder.Models
             new SAMECounty(37, "Sussex", new SAMEState(34, "NJ")),
             new SAMECounty(39, "Union", new SAMEState(34, "NJ")),
             new SAMECounty(41, "Warren", new SAMEState(34, "NJ")),
+            new SAMECounty(0, " Entire State", new SAMEState(34, "NJ")),
 
             //NM - 35
             new SAMECounty(1, "Bernalillo", new SAMEState(35, "NM")),
@@ -1573,6 +1595,7 @@ namespace EASEncoder.Models
             new SAMECounty(57, "Torrance", new SAMEState(35, "NM")),
             new SAMECounty(59, "Union", new SAMEState(35, "NM")),
             new SAMECounty(61, "Valencia", new SAMEState(35, "NM")),
+            new SAMECounty(0, " Entire State", new SAMEState(35, "NM")),
 
             //NY - 36
             new SAMECounty(101, "Steuben", new SAMEState(36, "NY")),
@@ -1637,6 +1660,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Schoharie", new SAMEState(36, "NY")),
             new SAMECounty(97, "Schuyler", new SAMEState(36, "NY")),
             new SAMECounty(99, "Seneca", new SAMEState(36, "NY")),
+            new SAMECounty(0, " Entire State", new SAMEState(36, "NY")),
 
             //NC - 37
             new SAMECounty(101, "Johnston", new SAMEState(37, "NC")),
@@ -1739,6 +1763,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Hyde", new SAMEState(37, "NC")),
             new SAMECounty(97, "Iredell", new SAMEState(37, "NC")),
             new SAMECounty(99, "Jackson", new SAMEState(37, "NC")),
+            new SAMECounty(0, " Entire State", new SAMEState(37, "NC")),
 
             //ND - 38
             new SAMECounty(101, "Ward", new SAMEState(38, "ND")),
@@ -1794,6 +1819,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Towner", new SAMEState(38, "ND")),
             new SAMECounty(97, "Traill", new SAMEState(38, "ND")),
             new SAMECounty(99, "Walsh", new SAMEState(38, "ND")),
+            new SAMECounty(0, " Entire State", new SAMEState(38, "ND")),
 
             //OH - 39
             new SAMECounty(101, "Marion", new SAMEState(39, "OH")),
@@ -1884,6 +1910,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Lucas", new SAMEState(39, "OH")),
             new SAMECounty(97, "Madison", new SAMEState(39, "OH")),
             new SAMECounty(99, "Mahoning", new SAMEState(39, "OH")),
+            new SAMECounty(0, " Entire State", new SAMEState(39, "OH")),
 
             //OK - 40
             new SAMECounty(101, "Muskogee", new SAMEState(40, "OK")),
@@ -1963,6 +1990,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Marshall", new SAMEState(40, "OK")),
             new SAMECounty(97, "Mayes", new SAMEState(40, "OK")),
             new SAMECounty(99, "Murray", new SAMEState(40, "OK")),
+            new SAMECounty(0, " Entire State", new SAMEState(40, "OK")),
 
             //OR - 41
             new SAMECounty(1, "Baker", new SAMEState(41, "OR")),
@@ -2001,6 +2029,7 @@ namespace EASEncoder.Models
             new SAMECounty(67, "Washington", new SAMEState(41, "OR")),
             new SAMECounty(69, "Wheeler", new SAMEState(41, "OR")),
             new SAMECounty(71, "Yamhill", new SAMEState(41, "OR")),
+            new SAMECounty(0, " Entire State", new SAMEState(41, "OR")),
 
             //PA - 42
             new SAMECounty(101, "Philadelphia", new SAMEState(42, "PA")),
@@ -2070,6 +2099,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Northampton", new SAMEState(42, "PA")),
             new SAMECounty(97, "Northumberland", new SAMEState(42, "PA")),
             new SAMECounty(99, "Perry", new SAMEState(42, "PA")),
+            new SAMECounty(0, " Entire State", new SAMEState(42, "PA")),
 
             //RI - 44
             new SAMECounty(1, "Bristol", new SAMEState(44, "RI")),
@@ -2077,6 +2107,7 @@ namespace EASEncoder.Models
             new SAMECounty(5, "Newport", new SAMEState(44, "RI")),
             new SAMECounty(7, "Providence", new SAMEState(44, "RI")),
             new SAMECounty(9, "Washington", new SAMEState(44, "RI")),
+            new SAMECounty(0, " Entire State", new SAMEState(44, "RI")),
 
             //SC - 45
             new SAMECounty(1, "Abbeville", new SAMEState(45, "SC")),
@@ -2125,6 +2156,7 @@ namespace EASEncoder.Models
             new SAMECounty(87, "Union", new SAMEState(45, "SC")),
             new SAMECounty(89, "Williamsburg", new SAMEState(45, "SC")),
             new SAMECounty(91, "York", new SAMEState(45, "SC")),
+            new SAMECounty(0, " Entire State", new SAMEState(45, "SC")),
 
             //SD - 46
             new SAMECounty(101, "Moody", new SAMEState(46, "SD")),
@@ -2193,6 +2225,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Mellette", new SAMEState(46, "SD")),
             new SAMECounty(97, "Miner", new SAMEState(46, "SD")),
             new SAMECounty(99, "Minnehaha", new SAMEState(46, "SD")),
+            new SAMECounty(0, " Entire State", new SAMEState(46, "SD")),
 
             //TN - 47
             new SAMECounty(101, "Lewis", new SAMEState(47, "TN")),
@@ -2290,6 +2323,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Lake", new SAMEState(47, "TN")),
             new SAMECounty(97, "Lauderdale", new SAMEState(47, "TN")),
             new SAMECounty(99, "Lawrence", new SAMEState(47, "TN")),
+            new SAMECounty(0, " Entire State", new SAMEState(47, "TN")),
 
             //TX - 48
             new SAMECounty(101, "Cottle", new SAMEState(48, "TX")),
@@ -2546,6 +2580,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Concho", new SAMEState(48, "TX")),
             new SAMECounty(97, "Cooke", new SAMEState(48, "TX")),
             new SAMECounty(99, "Coryell", new SAMEState(48, "TX")),
+            new SAMECounty(0, " Entire State", new SAMEState(48, "TX")),
 
             //UT - 49
             new SAMECounty(1, "Beaver", new SAMEState(49, "UT")),
@@ -2577,6 +2612,7 @@ namespace EASEncoder.Models
             new SAMECounty(53, "Washington", new SAMEState(49, "UT")),
             new SAMECounty(55, "Wayne", new SAMEState(49, "UT")),
             new SAMECounty(57, "Weber", new SAMEState(49, "UT")),
+            new SAMECounty(0, " Entire State", new SAMEState(49, "UT")),
 
             //VT - 50
             new SAMECounty(1, "Addison", new SAMEState(50, "VT")),
@@ -2593,6 +2629,7 @@ namespace EASEncoder.Models
             new SAMECounty(23, "Washington", new SAMEState(50, "VT")),
             new SAMECounty(25, "Windham", new SAMEState(50, "VT")),
             new SAMECounty(27, "Windsor", new SAMEState(50, "VT")),
+            new SAMECounty(0, " Entire State", new SAMEState(50, "VT")),
 
             //VA - 51
             new SAMECounty(101, "King William", new SAMEState(51, "VA")),
@@ -2729,6 +2766,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "James City", new SAMEState(51, "VA")),
             new SAMECounty(97, "King and Queen", new SAMEState(51, "VA")),
             new SAMECounty(99, "King George", new SAMEState(51, "VA")),
+            new SAMECounty(0, " Entire State", new SAMEState(51, "VA")),
 
             //WA - 53
             new SAMECounty(1, "Adams", new SAMEState(53, "WA")),
@@ -2770,6 +2808,7 @@ namespace EASEncoder.Models
             new SAMECounty(73, "Whatcom", new SAMEState(53, "WA")),
             new SAMECounty(75, "Whitman", new SAMEState(53, "WA")),
             new SAMECounty(77, "Yakima", new SAMEState(53, "WA")),
+            new SAMECounty(0, " Entire State", new SAMEState(53, "WA")),
 
             //WV - 54
             new SAMECounty(101, "Webster", new SAMEState(54, "WV")),
@@ -2827,6 +2866,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Tyler", new SAMEState(54, "WV")),
             new SAMECounty(97, "Upshur", new SAMEState(54, "WV")),
             new SAMECounty(99, "Wayne", new SAMEState(54, "WV")),
+            new SAMECounty(0, " Entire State", new SAMEState(54, "WV")),
 
             //WI - 55
             new SAMECounty(101, "Racine", new SAMEState(55, "WI")),
@@ -2901,6 +2941,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Polk", new SAMEState(55, "WI")),
             new SAMECounty(97, "Portage", new SAMEState(55, "WI")),
             new SAMECounty(99, "Price", new SAMEState(55, "WI")),
+            new SAMECounty(0, " Entire State", new SAMEState(55, "WI")),
 
             //WY - 56
             new SAMECounty(1, "Albany", new SAMEState(56, "WY")),
@@ -2926,6 +2967,7 @@ namespace EASEncoder.Models
             new SAMECounty(41, "Uinta", new SAMEState(56, "WY")),
             new SAMECounty(43, "Washakie", new SAMEState(56, "WY")),
             new SAMECounty(45, "Weston", new SAMEState(56, "WY")),
+            new SAMECounty(0, " Entire State", new SAMEState(56, "WY")),
 
             //AS - 60
             new SAMECounty(10, "Eastern District", new SAMEState(60, "AS")),
@@ -2933,6 +2975,7 @@ namespace EASEncoder.Models
             new SAMECounty(30, "Rose Island", new SAMEState(60, "AS")),
             new SAMECounty(40, "Swains Island", new SAMEState(60, "AS")),
             new SAMECounty(50, "Western District", new SAMEState(60, "AS")),
+            new SAMECounty(0, " Entire Territory", new SAMEState(60, "AS")),
 
             //GU - 66
             new SAMECounty(10, "Guam", new SAMEState(66, "GU")),
@@ -2942,6 +2985,7 @@ namespace EASEncoder.Models
             new SAMECounty(110, "Saipan Municipality", new SAMEState(69, "MP")),
             new SAMECounty(120, "Tinian Municipality", new SAMEState(69, "MP")),
             new SAMECounty(85, "Northern Islands Municipality", new SAMEState(69, "MP")),
+             new SAMECounty(0, " Entire Territory", new SAMEState(69, "MP")),
 
             //PR - 72
             new SAMECounty(101, "Morovis Municipio", new SAMEState(72, "PR")),
@@ -3022,6 +3066,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Maunabo Municipio", new SAMEState(72, "PR")),
             new SAMECounty(97, "Mayaguez Municipio", new SAMEState(72, "PR")),
             new SAMECounty(99, "Moca Municipio", new SAMEState(72, "PR")),
+            new SAMECounty(0, " Todos Los Municipios", new SAMEState(72, "PR")),
 
             //UM - 74
             new SAMECounty(300, "Midway Islands", new SAMEState(74, "UM")),
@@ -3030,6 +3075,7 @@ namespace EASEncoder.Models
             new SAMECounty(10, "St. Croix Island", new SAMEState(78, "VI")),
             new SAMECounty(20, "St. John Island", new SAMEState(78, "VI")),
             new SAMECounty(30, "St. Thomas Island", new SAMEState(78, "VI")),
+            new SAMECounty(0, " Entire Territory", new SAMEState(78, "VI")),
 
             //AL - 1
             new SAMECounty(101, "Montgomery", new SAMEState(1, "AL")),
@@ -3099,6 +3145,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Marshall", new SAMEState(1, "AL")),
             new SAMECounty(97, "Mobile", new SAMEState(1, "AL")),
             new SAMECounty(99, "Monroe", new SAMEState(1, "AL")),
+            new SAMECounty(0, " Entire State", new SAMEState(1, "AL")),
 
             //AK - 2
             new SAMECounty(100, "Haines Borough", new SAMEState(2, "AK")),
@@ -3130,6 +3177,7 @@ namespace EASEncoder.Models
             new SAMECounty(68, "Denali Borough", new SAMEState(2, "AK")),
             new SAMECounty(70, "Dillingham Census Area", new SAMEState(2, "AK")),
             new SAMECounty(90, "Fairbanks North Star Borough", new SAMEState(2, "AK")),
+            new SAMECounty(0, " Entire State", new SAMEState(2, "AK")),
 
             //AZ - 4
             new SAMECounty(1, "Apache", new SAMEState(4, "AZ")),
@@ -3147,6 +3195,7 @@ namespace EASEncoder.Models
             new SAMECounty(23, "Santa Cruz", new SAMEState(4, "AZ")),
             new SAMECounty(25, "Yavapai", new SAMEState(4, "AZ")),
             new SAMECounty(27, "Yuma", new SAMEState(4, "AZ")),
+            new SAMECounty(0, " Entire State", new SAMEState(4, "AZ")),
 
             //AR - 5
             new SAMECounty(101, "Newton", new SAMEState(5, "AR")),
@@ -3224,6 +3273,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Monroe", new SAMEState(5, "AR")),
             new SAMECounty(97, "Montgomery", new SAMEState(5, "AR")),
             new SAMECounty(99, "Nevada", new SAMEState(5, "AR")),
+            new SAMECounty(0, " Entire State", new SAMEState(5, "AR")),
 
             //CA - 6
             new SAMECounty(101, "Sutter", new SAMEState(6, "CA")),
@@ -3284,6 +3334,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Solano", new SAMEState(6, "CA")),
             new SAMECounty(97, "Sonoma", new SAMEState(6, "CA")),
             new SAMECounty(99, "Stanislaus", new SAMEState(6, "CA")),
+            new SAMECounty(0, " Entire State", new SAMEState(6, "CA")),
 
             //CO - 8
             new SAMECounty(101, "Pueblo", new SAMEState(8, "CO")),
@@ -3350,6 +3401,7 @@ namespace EASEncoder.Models
             new SAMECounty(95, "Phillips", new SAMEState(8, "CO")),
             new SAMECounty(97, "Pitkin", new SAMEState(8, "CO")),
             new SAMECounty(99, "Prowers", new SAMEState(8, "CO")),
+            new SAMECounty(0, " Entire State", new SAMEState(8, "CO")),
 
 
             //CT - 9
@@ -3360,7 +3412,11 @@ namespace EASEncoder.Models
             new SAMECounty(9, "New Haven", new SAMEState(9, "CT")),
             new SAMECounty(11, "New London", new SAMEState(9, "CT")),
             new SAMECounty(13, "Tolland", new SAMEState(9, "CT")),
-            new SAMECounty(15, "Windham", new SAMEState(9, "CT"))
+            new SAMECounty(15, "Windham", new SAMEState(9, "CT")),
+            new SAMECounty(0, " Entire State", new SAMEState(9, "CT")),
+
+            //Entire United States - 0
+            new SAMECounty(0, "United States", new SAMEState(0, "Entire United States")),
         };
 
         public static List<SAMEState> States = new List<SAMEState>
@@ -3415,6 +3471,7 @@ namespace EASEncoder.Models
             new SAMEState(72, "PR"),
             new SAMEState(74, "UM"),
             new SAMEState(78, "VI"),
+            new SAMEState(0, "Entire United States"),
             new SAMEState(1, "AL"),
             new SAMEState(2, "AK"),
             new SAMEState(4, "AZ"),
@@ -3460,6 +3517,7 @@ namespace EASEncoder.Models
             new SAMEMessageAlertCode("ADR", "Administrative Message"),
             new SAMEMessageAlertCode("AVW", "Avalanche Warning"),
             new SAMEMessageAlertCode("AVA", "Avalanche Watch"),
+            new SAMEMessageAlertCode("BLU", "Blue Alert"),
             new SAMEMessageAlertCode("BZW", "Blizzard Warning"),
             new SAMEMessageAlertCode("CAE", "Child Abduction Emergency"),
             new SAMEMessageAlertCode("CDW", "Civil Danger Warning"),
@@ -3469,6 +3527,7 @@ namespace EASEncoder.Models
             new SAMEMessageAlertCode("DSW", "Dust Storm Warning"),
             new SAMEMessageAlertCode("EQW", "Earthquake Warning"),
             new SAMEMessageAlertCode("EVI", "Evacuation Immediate"),
+            new SAMEMessageAlertCode("EWW", "Extreme Wind Warning"),
             new SAMEMessageAlertCode("FRW", "Fire Warning"),
             new SAMEMessageAlertCode("FFW", "Flash Flood Warning"),
             new SAMEMessageAlertCode("FFA", "Flash Flood Watch"),
@@ -3493,8 +3552,11 @@ namespace EASEncoder.Models
             new SAMEMessageAlertCode("SVA", "Severe Thunderstorm Watch"),
             new SAMEMessageAlertCode("SVS", "Severe Weather Statement"),
             new SAMEMessageAlertCode("SPW", "Shelter in Place Warning"),
+            new SAMEMessageAlertCode("SQW", "Snow Squall Warning"),
             new SAMEMessageAlertCode("SMW", "Special Marine Warning"),
             new SAMEMessageAlertCode("SPS", "Special Weather Statement"),
+            new SAMEMessageAlertCode("SSA", "Storm Surge Watch"),
+            new SAMEMessageAlertCode("SSW", "Storm Surge Warning"),
             new SAMEMessageAlertCode("TOR", "Tornado Warning"),
             new SAMEMessageAlertCode("TOA", "Tornado Watch"),
             new SAMEMessageAlertCode("TRW", "Tropical Storm Warning"),
